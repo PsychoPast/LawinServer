@@ -11,6 +11,8 @@
     <ApplicationIcon>logopepega.ico</ApplicationIcon>
     <PackageIcon>logopepega.ico</PackageIcon>
     <Description>A launcher for LawinServer (Fortnite's private server).</Description>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
