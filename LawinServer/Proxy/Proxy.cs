@@ -153,16 +153,11 @@ namespace LawinServer.Net
             {
                 string fullUrl = oSession.fullUrl;
                 string requestHeaders = oSession.oRequest.headers.ToString();
-                string requestBody = oSession.GetRequestBodyAsString();
-                string responseHeaders = oSession.oResponse.headers.ToString();
-                string responseBody = oSession.GetResponseBodyAsString();
                 int responseCode = oSession.responseCode;
+
                 LogError($"[Endpoint] {fullUrl}\n" +
-                        $"[RequestHeader] { requestHeaders}\n" +
-                        $"[RequestBody] { requestBody }\n" +
-                        $"[ResponseHeaders] {responseHeaders}\n" +
-                        $"[ResponseBody] {responseBody}\n" +
-                        $"[ResponseCode] {responseCode}\n\n"
+                        $"[ResponseCode] {responseCode}\n" +
+                        $"[RequestHeader] { requestHeaders}\n\n"
                         );
             }
             Console.Title = $"LawinServer - Redirected {++count} endpoints";
