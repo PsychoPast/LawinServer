@@ -6,11 +6,9 @@ namespace LawinServer.Core
 {
     internal class AppRegistry : IDisposable
     {
-        public List<RegistryInfos> RegistryInfo { private get; set; }
+        private const string AppKey = @"SOFTWARE\LawinServer";
 
         private readonly RegistryKey _registryKey;
-
-        private const string AppKey = @"SOFTWARE\LawinServer";
 
         private readonly RegistryKey currentUser = Registry.CurrentUser;
 
@@ -22,7 +20,7 @@ namespace LawinServer.Core
             _ => currentUser.OpenSubKey(AppKey, RegistryKeyPermissionCheck.ReadWriteSubTree)
         };
 
-        public void UpdateRegistry() => _registryKey.SetValues(RegistryInfo);
+        public void UpdateRegistry(List<RegistryInfo> registryInfos) => _registryKey.SetValues(registryInfos);
 
         public void Dispose()
         {
@@ -34,7 +32,7 @@ namespace LawinServer.Core
         public T GetRegistryValue<T>(string name) => (T)_registryKey.GetValue(name, null);
     }
 
-    internal class RegistryInfos
+    internal class RegistryInfo
     {
         public string Name { get; set; }
 

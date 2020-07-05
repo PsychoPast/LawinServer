@@ -92,23 +92,22 @@ namespace LawinServer.Net
             _fiddlerCertInfos._privateKey ??= Prefs.GetStringPref("fiddler.certmaker.bc.key", null);
             if (!valueExist)
             {
-                appRegistry.RegistryInfo = new List<RegistryInfos>()
+                List<RegistryInfo> registryInfo = new List<RegistryInfo>()
                 {
-
-                    new RegistryInfos()
+                    new RegistryInfo()
                     {
                         Name = "FiddlerCert",
                         Value = _fiddlerCertInfos._fiddlerCert,
                         RegistryValueKind = RegistryValueKind.String
                     },
-                    new RegistryInfos()
+                    new RegistryInfo()
                     {
                         Name = "PrivateKey",
                         Value = _fiddlerCertInfos._privateKey,
                         RegistryValueKind = RegistryValueKind.String
                     }
                 };
-                appRegistry.UpdateRegistry();
+                appRegistry.UpdateRegistry(registryInfo);
             }
             return true;
         }
@@ -116,7 +115,7 @@ namespace LawinServer.Net
 
         public void StartProxy()
         {
-
+            appRegistry.Dispose();
             BeforeRequest += OnBeforeRequest;
             AfterSessionComplete += OnAfterSessionComplete;
             Startup(startupSettings);
