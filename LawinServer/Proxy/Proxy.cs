@@ -23,7 +23,7 @@ namespace LawinServer.Net
 
         private readonly FiddlerCoreStartupSettings startupSettings;
 
-        private (string _currentProxyServer, int _defaultUserProxyState) proxySettings;
+        private (object _currentProxyServer, int _defaultUserProxyState) proxySettings;
 
         private (string _fiddlerCert, string _privateKey) _fiddlerCertInfos;
 
@@ -55,7 +55,7 @@ namespace LawinServer.Net
         #region CONFIGURATION
         private void GetDefaultProxySettingsValue()
         {
-            proxySettings._currentProxyServer = (string)Registry.GetValue(proxyKey, Proxy_Server, null);
+            proxySettings._currentProxyServer = Registry.GetValue(proxyKey, Proxy_Server, null);
             proxySettings._defaultUserProxyState = (int)Registry.GetValue(proxyKey, Proxy_Enable, 0);
         }
 
