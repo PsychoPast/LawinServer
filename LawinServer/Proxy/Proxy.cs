@@ -46,7 +46,7 @@ namespace LawinServer.Net
                     .Build();
             if (!CertificateHandler(fiddlerCertRegKeysExist))
             {
-                LogError("[Install Manifest Error] Could not install the manifest. Please restart the app and try again!");
+                LogError("[Certificate Install Error] Could not install the certificate. Please restart the app and try again!");
                 StopProxy();
                 Environment.Exit(69);
             }
