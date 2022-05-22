@@ -49,7 +49,8 @@ namespace LawinServer
                     proxy.StopProxy();
                     return true;
                 default:
-                    return false;
+                    proxy.StopProxy();
+                    return true;
             }
         }
     }
