@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Authors>PsychoPast</Authors>
     <Copyright>Copyright © 2020 PsychoPast</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
