@@ -19,7 +19,7 @@ namespace LawinServer
                 }
             }
             Console.WriteLine("Thanks for using LawinServer made by Lawin#0001 :D\n" +
-                "This launcher was made for LawinServer by PsychoPast.\n" +
+                "This launcher was made for LawinServer by PsychoPast, Updated for localhost by Jurij15\n" +
                 "Running... PLEASE, don't close the window else the connection will be aborted.");
             new Program().Run(port);
             Console.ReadLine();
