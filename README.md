@@ -1,6 +1,7 @@
+Modified by Loigi#1714 (message me if you have question)
+
 usage:
-Double click the exe (uses default port: 9999) *RECOMMENDED*
+Double click the exe (uses default port: 8080) 
 
-Launch with arg: LawinServer.exe *port* (specifies the port to use. Keep in mind a port can be unavailable)
 
-[Download Net core 3.1 Runtime](https://download.visualstudio.microsoft.com/download/pr/d97cfaf4-b17f-46c7-9a11-7f0d25dfd8b0/f76d4fce8e38b289efb9403aab0a0c9f/dotnet-runtime-3.1.5-win-x64.exe)
+[Download Net core 6.0 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-6.0.16-windows-x64-installer)
