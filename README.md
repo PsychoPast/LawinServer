@@ -1,5 +1,7 @@
+Forked and modifided for LawinV2 By Loigi
+
 usage:
-Double click the exe (uses default port: 9999) *RECOMMENDED*
+Double click the exe (uses default port: 8080) *RECOMMENDED*
 
 Launch with arg: LawinServer.exe *port* (specifies the port to use. Keep in mind a port can be unavailable)
 
